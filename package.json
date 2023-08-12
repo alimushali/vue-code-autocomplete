@@ -1,0 +1,11 @@
+{
+  "name": "vue-code-autocomplete",
+  "version": "1.0.0",
+  "description": "sample vue code autocomplete",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "alimushali",
+  "license": "ISC"
+}
