@@ -1,13 +1,27 @@
 <template>
   <div class="main-window">
-    <input type="text" class="main-window--text" />
+    <args-component
+      :template="'CASE <% 0 %> WHEN <% 1 %> THEN <% 2 %> ELSE <% 3 %> END'"
+    ></args-component>
+    <args-component
+      :template="'<% 0 %> + <% 1 %>'"
+    ></args-component>
+    <args-component
+      :template="'POW(<% 0 %>, <% 1 %>)'"
+    >
+      <template #1>
+        <h2>LOOOL</h2>
+      </template>
+    </args-component>
    </div>
 </template>
 
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import ArgsComponent from '../components/ArgsComponent.vue';
 export default defineComponent({
+  components: { ArgsComponent },
   data: () => ({
     text: "",
   }),
