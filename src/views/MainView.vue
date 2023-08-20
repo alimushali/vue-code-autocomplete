@@ -2,15 +2,9 @@
   <div class="main-window">
     <args-component
       :template="'CASE <% 0 %> WHEN <% 1 %> THEN <% 2 %> ELSE <% 3 %> END'"
-    ></args-component>
-    <args-component
-      :template="'<% 0 %> + <% 1 %>'"
-    ></args-component>
-    <args-component
-      :template="'POW(<% 0 %>, <% 1 %>)'"
     >
-      <template #1>
-        <h2>LOOOL</h2>
+      <template v-for="(arg, i) in args" v-slot:[i]>
+        <input type="text" :key="i" :placeholder="`placeholder ${i}`" />
       </template>
     </args-component>
    </div>
@@ -24,6 +18,7 @@ export default defineComponent({
   components: { ArgsComponent },
   data: () => ({
     text: "",
+    args: ["text", "text", "text", "text"]
   }),
 });
 </script>
