@@ -8,7 +8,6 @@
         <input type="text" />
       </slot>
     </template>
-    <div class="args-component--subtemplate"> {{  }} </div>
   </div>
 </template>
 
